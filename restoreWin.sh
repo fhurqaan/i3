@@ -1,9 +1,13 @@
 #!/bin/bash
+
 # My worksapce names
 # first elenment is null becaue bash starts from elenment 0
 # json filename 1.json for workspace 1, 2.json for workspace 2, etc.... 
 #
-ws=(""  ":Main" ":Web" ":C0de" "MT" ":VLC" ":LibreOffice" ":Inkscape" ":Gimp" "MT" "MT")
+# ws=(""  ":Main" ":Web" ":C0de" "MT" ":VLC" ":LibreOffice" ":Inkscape" ":Gimp" "MT" "MT")
+# the above line is store in a different file. i can call with other scripts. 
+# it is loaded below!!
+source $HOME/scripts/i3/vars.inc
 
 # Path to where my .json files saved
 layoutPath="$HOME/.config/i3/layouts/"

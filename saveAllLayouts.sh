@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # NOTE:
 # No error checking is done for file paths;
 # assuming user points to existing directory path!!!! :)
@@ -7,14 +8,15 @@
 # Save layout positions in json file.
 # json filename 1.json for workspace 1, 2.json for workspace 2, etc.... 
 #
+
 clear
 
 # Fill in your workspace name as set in the i3 config file.
 # first elenment is null because bash starts from elenment 0
 # if you have any unused workspaces leave the field as ""
 # My worksapce names
-ws=("" ":Main" ":Web" ":C0de" ":MT" ":VLC" ":LibreOffice" ":Inkscape" ":Gimp" ":MT" ":MT")
-
+# ws=("" ":Main" ":Web" ":C0de" ":MT" ":VLC" ":LibreOffice" ":Inkscape" ":Gimp" ":MT" ":MT")
+source $HOME/scripts/i3/vars.inc
 # Path to where my .json files saved
 # layoutPath=$HOME/<directory path to save the layout files>
 # ie: layoutPath="$HOME/.config/i3/"
