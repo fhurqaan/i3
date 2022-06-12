@@ -9,26 +9,23 @@
 # it is loaded below!!
 source $HOME/scripts/i3/vars.inc
 
-# Path to where my .json files saved
-layoutPath="$HOME/.config/i3/layouts/"
-
 # check if json file exists, then load saved workspace
 for i in ${!ws[@]}; do
 	wsname=$i${ws[$i]}
-	if  [[ -f "$layoutPath$i.json" ]] 
+	if  [[ -f "$jsonPath$i.json" ]] 
 	then
-		echo Loading layout for $wsname 
-		i3-msg "workspace $wsname; append_layout $layoutPath/$i.json"
+		echo -e "\e[1;93mLoading layout for $wsname\e[0m"
+		i3-msg "workspace $wsname; append_layout $jsonPath/$i.json"
 	fi
 done
+
 
 # execute the list of programs to be loaded 
 # in the layout with the &, 1 per line
 # regardless of workspace
-
 urxvt &
 thunar &
-# atom &
 firefox &
 # vlc &
+# atom &
 #ftp &
