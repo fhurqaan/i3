@@ -55,5 +55,6 @@ About .json
 -----------
 
 I find it easier using vim to edit this file, as the comments are highlighted.
-Just delete the comments not in the "swallow" section, those have to be uncommented.
+Just delete the comments not in the "swallow" section, those in the "swollow" 
+section have to be uncommented and edited if needed.
 
