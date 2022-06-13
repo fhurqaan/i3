@@ -18,12 +18,14 @@ for i in ${!ws[@]}; do
 		i3-msg "workspace $wsname; append_layout $jsonPath/$i.json"
 	fi
 done
-
+echo When all is one and one is all
+echo You\'ll be a rock and not roll
 
 # execute the list of programs to be loaded 
 # in the layout with the &, 1 per line
 # regardless of workspace
 urxvt &
+xpad &
 thunar &
 firefox &
 # vlc &
