@@ -25,8 +25,8 @@ echo You\'ll be a rock and not roll
 # in the layout with the &, 1 per line
 # regardless of workspace
 urxvt &
-xpad &
-thunar &
+xpad & 
+dolphin &
 firefox &
 # vlc &
 # atom &
