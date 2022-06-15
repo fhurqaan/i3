@@ -137,12 +137,14 @@ mode "resize" {
 # finds out, if available)
 bar {
 #        status_command i3status
-		position top
+		position bottom 
 }
 
 
 # Keybindings, laid out so easier to see which keys are available
 
+
+# Mod only
 #bindsym $mod+q			exec  
 bindsym $mod+w			layout tabbed
 bindsym $mod+e			layout togle split
@@ -157,7 +159,7 @@ bindsym $mod+a			focus parent
 bindsym $mod+s			layout stacking  
 #bindsym $mod+d			exec  
 bindsym $mod+f			fullscreeen toggle
-#bindsym $mod+g			exec ghidra 
+#bindsym $mod+g			exec  
 bindsym $mod+h			split h 
 bindsym $mod+j			focus left
 bindsym $mod+k			focus down  
@@ -170,14 +172,15 @@ bindsym $mod+v 			split v
 #bindsym $mod+b 		exec 
 #bindsym $mod+n 		exec 
 #bindsym $mod+m 		exec 
-bindsym $mod+Return		exec $term; focus
+bindsym $mod+Return		exec $term -name dummy
 bindsym $mod+space 		focus mode_toggle
 bindsym $mod+Left 		focus left
 bindsym $mod+Down 		focus down
 bindsym $mod+Up 		focus up
 bindsym $mod+Right 		focus right
+bindsym $mod+Print		exec $sPath/screenCapture.sh
 
-
+# mod shift
 bindsym $modshft+q 		kill
 #bindsym $modshft+w		exec  
 #bindsym $modshft+e		exec  
@@ -204,14 +207,16 @@ bindsym $modshft+c		reload
 bindsym $modshft+v		exec vlc
 bindsym $modshft+b		exec firefox 
 #bindsym $modshft+n		exec  
-bindsym $modshft+m		exec thunar
+bindsym $modshft+m		exec dolphin
 #bindsym $modshft+Return	exec 
 bindsym $modshft+space 	floating toggle
 bindsym $modshft+Left 	move left
 bindsym $modshft+Down 	move down
 bindsym $modshft+Up 	move up
 bindsym $modshft+Right 	move right
+bindsym $modshft+Print	exec xfce4-screenshooter
 
+# mod control
 #bindsym $modctrl+q		exec  
 #bindsym $modctrl+w		exec  
 #bindsym $modctrl+e		exec  
@@ -239,9 +244,8 @@ bindsym $modshft+Right 	move right
 #bindsym $modctrl+b		exec  
 #bindsym $modctrl+n		exec  
 #bindsym $modctrl+m		exec  
-#bindsym $mod+Return	exec 
-#bindsym $mod+space 	exec		
-
+#bindsym $modctrl+Return	exec 
+#bindsym $modctrl+space 	exec		
 
 # Function keys
 
@@ -320,29 +324,32 @@ bindsym $modshft+6 move container to workspace $ws6
 bindsym $modshft+7 move container to workspace $ws7
 bindsym $modshft+8 move container to workspace $ws8
 bindsym $modshft+9 move container to workspace $ws9
-bindsym $modshft+0 move container to workspace $ws10
-
-# start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 
-# set Apps to open in assigned workspace
 # set wallpaper
 $exeans feh --bg-center $HOME/Pictures/wallpaper.png
 
 # set SCRATCHPAD properties
-for_window [instance=floats] resize set 1220 500
-for_window [instance=floats] border pixel 5
-for_window [instance=floats] floating enable
-for_window [instance=floats] move scratchpad
+for_window [instance="floats"] resize set 1500 500
+for_window [instance="floats"] border pixel 5
+for_window [instance="floats"] floating enable
+for_window [instance="floats"] move scratchpad
 
 
 # terminal settings
-for_window [instance=urxvt] resize set 1900 600
-for_window [instance=urxvt] floating enable
+for_window [instance="urxvt"] resize set width 1175 height 550 
+
+for_window [instance="dummy"] [instance="dummy"] floating enable;\
+           [instance="dummy"] resize set width 1000 height 450
 
 # xpad setting
 for_window [instance=xpad] floating enable
-exec xpad
+
+# dolphin
+for_window [instance="dolphin"] move position 1180 30;\
+           [instance="dolphin"] resize set width 725 1000
+
+# set programs to open in assigned workspace
 
 # firefox
 for_window [class="Firefox"] floating enable 
