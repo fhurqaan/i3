@@ -339,28 +339,28 @@ for_window [instance="floats"] move scratchpad
 # terminal settings
 for_window [instance="urxvt"] resize set width 1175 height 550 
 
-for_window [instance="dummy"] [instance="dummy"] floating enable;\
-           [instance="dummy"] resize set width 1000 height 450
+for_window [instance="dummy"] floating enable; [instance="dummy"] resize set width 1000 height 450
 
 # xpad setting
 for_window [instance=xpad] floating enable
 
 # dolphin
-for_window [instance="dolphin"] move position 1180 30;\
-           [instance="dolphin"] resize set width 725 1000
+for_window [instance="dolphin"] move position 1180 px 30 px; [instance="dolphin"] resize set width 725 px height 1025 px; [instance="dolphin"] floating enable
 
 # set programs to open in assigned workspace
 
 # firefox
-for_window [class="Firefox"] floating enable 
+for_window [class="Firefox"] floating enable; [class="Firefox"] move position 0 px 30 px; [class="Firefox"] resize set width 1000 px height 1025 px
+
 assign [class="Firefox"] $ws2
 
 assign [class="Atom"] $ws3
 
 # non floating workspaces...all fullscreen
 assign [class="vlc"] $ws5
-assign [class="libreoffice"] $w6s
+assign [class="libreoffice"] $w6
 assign [class="Inkscape"] $ws7
 assign [class="Gimp"] $ws8
 
 
+exec "i3-msg restart"
