@@ -24,10 +24,10 @@ echo You\'ll be a rock and not roll
 # execute the list of programs to be loaded 
 # in the layout with the &, 1 per line
 # regardless of workspace
+firefox &
 urxvt &
 xpad & 
 dolphin &
-firefox &
 # vlc &
-# atom &
+atom &
 #ftp &
