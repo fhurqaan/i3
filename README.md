@@ -37,9 +37,9 @@ The file is well commented :) so it should be easy to use.
 saveCurret.sh
 -------------
 
-Script will save the current workspace to the json file in the path set in the vars.inc
-file. You could use a keybinding for this, ie, F12, to capture the layout.
-For this script to work, you will need to download a program called jq...
+Script will save the current workspace to the json file in the path set in the 
+vars.inc file. You could use a keybinding for this, ie, F12, to capture the 
+layout.For this script to work, you will need to download a program called jq.
 Refer to your distribution on how to download.
 I am using slackware, so there is no... apt yam or jam... :)
 
@@ -59,4 +59,26 @@ About .json
 I find it easier using vim to edit this file, as the comments are highlighted.
 Just delete the comments not in the "swallow" section, those in the "swallow" 
 section have to be uncommented and edited or deleted, if needed.
+
+
+screenCapture.sh
+----------------
+
+Since i am using Slackware, i've used the program xcfe4-screenshooter for 
+screen capture. If you use a diffrent program or want to tweak the setting, 
+you can edit the script to suit your needs. 
+
+Basically call the script with the option:-
+-f for fullscreen capture
+-w to capture active window (a 3 second delay before it captures)
+-r use the mouse to select a region of the screen to capture.
+-i to run the program interactively
+
+ie. in my i3 config, i am using the print screen/system request key
+
+bindsym $mod+Print exec screenCapture.sh -i
+bindsym $mod+Control+Print exec screenCapture.sh -f
+
+
+All bugs removed, unknown bugs still there, still unknown.
 
