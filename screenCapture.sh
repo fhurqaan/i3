@@ -24,8 +24,8 @@ shutterSnd=$HOME/scripts/i3/click.mp3
 #
 # Why use xcfe4-screenshooter, well it came install in the system
 # no point using scrot or anything else if it get the job done.
-
-# i am using mplayer to play the
+#
+# I am using mplayer to play the shutter sound
 # --
 # Get stoned!....Drink wet cement!
 
