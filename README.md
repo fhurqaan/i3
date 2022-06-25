@@ -21,8 +21,8 @@ mainly removing comments in the json file not in the "swallow" section.
 Comments begin with // in json
 Comments in the "swallow" section should not be deleted but uncommented. 
 
-You will need to edit the script and edit the line 18. 
-It starts ws=("". You SHOULD leave the first element as "". 
+You will need to edit the script. 
+The line starts ws=("". You SHOULD leave the first element as "". 
 Other elements like ":Main" ":Web" ":C0de" ... 
 should be edited to match EXACTLY as in you i3/config file,
 as you have your own workspace names. I dont use icon font in workspace name, 
@@ -39,7 +39,7 @@ saveCurret.sh
 
 Script will save the current workspace to the json file in the path set in the 
 vars.inc file. You could use a keybinding for this, ie, F12, to capture the 
-layout.For this script to work, you will need to download a program called jq.
+layout. For this script to work, you will need to download a program called jq.
 Refer to your distribution on how to download.
 I am using slackware, so there is no... apt yam or jam... :)
 
