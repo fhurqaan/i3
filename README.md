@@ -76,9 +76,13 @@ Basically call the script with the option:-
 
 ie. in my i3 config, i am using the print screen/system request key
 
-bindsym $mod+Print exec screenCapture.sh -i
-bindsym $mod+Control+Print exec screenCapture.sh -f
+bindsym $mod+Print exec screenCapture.sh -f
 
+bindsym $mod+Shift+Print exec screenCapture.sh -r
 
-All bugs removed, unknown bugs still there, still unknown.
+bindsym $mod+Control+Print exec screenCapture.sh -i
+
+bindsym $mod+Shift+Control+Print exec screenCapture.sh -w
+
+All known bugs removed, unknown bugs still there, still unknown.
 
