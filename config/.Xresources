@@ -1,13 +1,13 @@
-URxvt*foreground: #999999
-URxvt*background: #204060
+URxvt*foreground: #aaaaaa
+URxvt*background: #303030
 *.cursorColor:#00FF00
 
 ! Black
 *.color0: #000000
-*.color8: #888888
+*.color8: #777777
 
 ! red
-*.color1: #880000
+*.color1: #770000
 *.color9: #ff0000
 
 ! green
@@ -15,24 +15,27 @@ URxvt*background: #204060
 *.color10: #00ff00
 
 ! yellow
-*.color3: #888800
+*.color3: #777700
 *.color11: #ffff00
 
 ! blue
-*.color4: #000088
+*.color4: #000077
 *.color12: #0000ff
 
 ! magenta
-*.color5: #880088
+*.color5: #770077
 *.color13: #ff00ff
 
 ! cyan
-*.color6: #008888
+*.color6: #007777
 *.color14: #00FFFF
 
 ! white
-*.color7: #888888
+*.color7: #777777
 *.color15: #ffffff
+
+Sxiv.background: #000000
+Sxiv.foreground: #fff777
 
 URxvt*colorUL: yellow
 URxvt*underlineColor: yellow
@@ -43,13 +46,14 @@ URxvt*pointerColor2: #ff00ff
 URxvt*pointerColorBackground: #ffffff
 
 
-#define myfonts xft:Noto Sans Mono:antialias=true:pixelsize=16,\
+#define myfonts xft:IBMPlexMono-Medium:antialias=true:pixelsize=16,
                 xft:Fira Code:antialias=true:pixelsize=16,\
+                xft:Noto Sans Mono:antialias=true:pixelsize=16,\
                 xft:myawesomefont:pixelsize=11,\
-                xft:icon16:pixelzise=11
+                xft:iconicfonts40:pixelzise=11
 URxvt.font: myfonts
 URxvt.boldFont: myfonts
-URxvt.italicFont: myfonts 
+URxvt.italicFont: myfonts
 URxvt.boldItalicFont: myfonts
 URxvt*xftAntialias: true
 
@@ -73,15 +77,16 @@ URxvt*cursorBlink: true
 URxvt*cursorUnderline: false
 URxvt*saveline: 4096
 URxvt*scrollBar: false
-URxvt*scrollBar_right: true 
+URxvt*scrollBar_right: true
 URxvt*urgentOnBell: true
 !URxvt*depth: 32
-URxvt*iso14755: false 
+URxvt*iso14755: false
 !URxvt*title: Terminal
 !URxvt.iconName: Terminal
 !URxvt*iconFile: /home/devnull/Pictures/terminal.png
 URxvt*perl-lib: /usr/lib64/urxvt/perl
-URxvt.perl-ext-common: default,font-size,tabbed,clipboard 
+URxvt.perl-ext-common: default,font-size,clipboard,font
+!;tabbed
 !default,clipboard,url-select,keyboard-select,font-size
 !URxvt*copyCommand: xclip -i -selection clipboard
 !URxvt*pasteCommand: xclip -o -selection clipboard
@@ -92,16 +97,17 @@ URxvt*keysym.C-S-v: perl:clipboard:paste
 !URxvt*keysym.M-Escape: perl:keyboard-select:activate
 !URxvt*keysym.M-s: perl:keyboard:select:search
 !URxvt*keysym.M-u: perl:url-select:select_next
-URxvt*keysym.C-KP_Add: font-size:increase
-URxvt*keysym.C-KP_Subtract: font-size:decrease
-URxvt*keysym.C-equal: font-size:reset
+URxvt.keysym.C-KP_Add: font-size:increase
+URxvt.keysym.C-KP_Subtract: font-size:decrease
+URxvt.keysym.C-equal: font-size:reset
 URxvt*urlLauncher: firefox
 URxvt*underlineURLs: true
 URxvt*urlButton: 1
-URxvt*transparent: true
-URxvt*tintColor: #aaaaaa
+
 ! set transparency %
-URxvt*shading: 50
+URxvt*transparent: true
+URxvt*tintColor: #666666
+URxvt*shading: 40
 
 URxvt*keysym.Shift-Up: command:\033]720;1\007
 URxvt*keysym.Shift-Down: command:\033]721;1\007
