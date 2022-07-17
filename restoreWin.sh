@@ -10,15 +10,23 @@
 source $HOME/scripts/i3/vars.inc
 
 # check if json file exists, then load saved workspace
-for i in ${!ws[@]}; do
-	wsname=$i${ws[$i]}
+for i in {10..1}; do
+    :b2
+
+:"
+
+
+"
+:
 	if  [[ -f "$jsonPath$i.json" ]]
 	then
-		echo -e "\e[1;93mLoading layout for $wsname\e[0m"
-		i3-msg "workspace $wsname; append_layout $jsonPath/$i.json"
+		echo -e "\e[1;93m$wsname found...loading.\e[0m"
+		i3-msg "workspace $wsname; append_layout $jsonPath$i.json" 2>&1 > /dev/null
+	else
+		echo -e "\e[1;91m$wsname not found ... skipping.\e[0m"
 	fi
 done
-echo When all is one and one is all
+echo \nWhen all is one and one is all
 echo You\'ll be a rock and not roll
 
 # execute the list of programs to be loaded
