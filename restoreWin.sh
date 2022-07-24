@@ -11,9 +11,10 @@ source $HOME/scripts/i3/vars.inc
 
 # check if json file exists, then load saved workspace
 for i in {10..1}; do
+	wsname=$i${ws[i]}
 	if  [[ -f "$jsonPath$i.json" ]]
 	then
-		echo -e "\e[1;93m$wsname found...loading.\e[0m"
+		echo -e "\e[1;93m$wsname saved layout found...loading.\e[0m"
 		i3-msg "workspace $wsname; append_layout $jsonPath$i.json" 2>&1 > /dev/null
 	else
 		echo -e "\e[1;91m$wsname not found ... skipping.\e[0m"
