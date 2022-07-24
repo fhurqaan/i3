@@ -11,13 +11,6 @@ source $HOME/scripts/i3/vars.inc
 
 # check if json file exists, then load saved workspace
 for i in {10..1}; do
-    :b2
-
-:"
-
-
-"
-:
 	if  [[ -f "$jsonPath$i.json" ]]
 	then
 		echo -e "\e[1;93m$wsname found...loading.\e[0m"
