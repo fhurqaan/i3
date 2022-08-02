@@ -45,23 +45,25 @@ URxvt*pointerColor: #ff00ff
 URxvt*pointerColor2: #ff00ff
 URxvt*pointerColorBackground: #ffffff
 
-
-#define myfonts xft:IBMPlexMono-Medium:antialias=true:pixelsize=16,
-                xft:Fira Code:antialias=true:pixelsize=16,\
-                xft:Noto Sans Mono:antialias=true:pixelsize=16,\
-                xft:myawesomefont:pixelsize=11,\
-                xft:iconicfonts40:pixelzise=11
-URxvt.font: myfonts
-URxvt.boldFont: myfonts
-URxvt.italicFont: myfonts
-URxvt.boldItalicFont: myfonts
-URxvt*xftAntialias: true
+! Font setup
+!xft:Fira Code-Regular:antialias=true:pixelsize=16,\
+!xft:myawesomefont:pixelsize=11,\
+!xft:iconicfonts40:pixelzise=11
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintfull
+URxvt*font: xft:IBMPlexMono-Medium:pixelsize=16
+URxvt*boldFont: xft:IBMPlexMono-Bold:pixelsize=16
+URxvt*italicFont: xft:IBMPlexMono-MediumItalic:pixelsize=16
+URxvt*boldItalicFont: xft:IBMPlexMono-BoldItalic:pixelsize:16
+! URxvt*xftAntialias: true
 
 ! reload URxvt with new shell and load .profile
 URxvt*loginShell: true
 
 ! Fade text not in focus
-URxvt*fading: 30
+URxvt*fading: 20
 
 URxvt.letterSpace: 0
 URxvt.lineSpace:0
@@ -70,8 +72,9 @@ URxvt.intensityStyles: true
 ! set screen character size
 !URxvt*geometry: 80x24
 URxvt*internalBorder: 0
-URxvt*externalBorder: 3
+URxvt*externalBorder: 0
 URxvt*borderWidth: 0
+!URxvt*borderColor: #77BB00
 
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: false
@@ -85,7 +88,7 @@ URxvt*iso14755: false
 !URxvt.iconName: Terminal
 !URxvt*iconFile: /home/devnull/Pictures/terminal.png
 URxvt*perl-lib: /usr/lib64/urxvt/perl
-URxvt.perl-ext-common: default,font-size,clipboard,font
+URxvt.perl-ext-common: default,font-size,clipboard
 !;tabbed
 !default,clipboard,url-select,keyboard-select,font-size
 !URxvt*copyCommand: xclip -i -selection clipboard
@@ -103,10 +106,9 @@ URxvt.keysym.C-equal: font-size:reset
 URxvt*urlLauncher: firefox
 URxvt*underlineURLs: true
 URxvt*urlButton: 1
-
-! set transparency %
 URxvt*transparent: true
 URxvt*tintColor: #666666
+! set transparency %
 URxvt*shading: 40
 
 URxvt*keysym.Shift-Up: command:\033]720;1\007
