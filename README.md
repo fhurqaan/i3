@@ -69,10 +69,16 @@ screen capture. If you use a diffrent program or want to tweak the setting,
 you can edit the script to suit your needs. 
 
 Basically call the script with the option:-
+
 -f for fullscreen capture
+
 -w to capture active window (a 3 second delay before it captures)
+
 -r use the mouse to select a region of the screen to capture.
+
 -i to run the program interactively
+
+
 
 ie. in my i3 config, i am using the print screen/system request key
 
